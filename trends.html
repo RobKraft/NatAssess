@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>American Trends | National Assessment Day</title>
+  <meta name="description" content="How the United States compares to itself over time — national pride, trust in institutions, and the social fabric, tracked across decades of Gallup, Pew, and government data.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Extra styles specific to the trends page */
+    .of-total { font-size: 0.75rem; color: var(--gray-600); }
+    .notes-cell { font-size: 0.8rem; color: var(--gray-600); max-width: 240px; }
+    .source-link { font-size: 0.8rem; }
+    .hidden { display: none !important; }
+
+    .data-note {
+      background: #FFF8E1;
+      border-left: 4px solid #F0AD00;
+      padding: 0.75rem 1rem;
+      font-size: 0.85rem;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 1.25rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="site-name">National Assessment Day</span>
+      <span class="tagline">February 27 &bull; Annual U.S. Ranking Review</span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-controls="main-nav">&#9776;</button>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="synopsis.html">Synopsis</a></li>
+        <li><a href="ranks.html">Rankings</a></li>
+        <li><a href="trends.html" class="active">Trends</a></li>
+        <li><a href="barriers.html">Progress</a></li>
+        <li><a href="sources.html">Sources</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="page-header">
+    <h1>American Trends: The U.S. vs. Itself</h1>
+    <p class="page-desc">Not how America ranks against other nations — how America compares to its own past. Click any column header to sort. Use the category buttons or search box to filter.</p>
+  </div>
+
+  <div class="data-note">
+    <strong>Data note:</strong> These measures compare the United States to its own history, not to
+    other countries. They come from repeated public-opinion surveys (Gallup, Pew Research, the
+    General Social Survey) and administrative statistics (BLS, CDC), and survey figures typically
+    carry a margin of error of about &plusmn;3&ndash;4 percentage points. Chart points reflect the years each
+    source actually measured, not every year in between &mdash; hover any point for its year and value.
+    Large single-year swings can reflect real events (9/11, the 2008 financial crisis, COVID-19) as
+    well as normal polling variability, and question wording can change over time. This is a starter
+    set; more measures will be added. See <a href="sources.html">Data Sources</a> for details.
+  </div>
+
+  <div class="legend">
+    <span>Assessment key:</span>
+    <span><span class="status status-good">Good</span> Top tier</span>
+    <span><span class="status status-ok">OK</span> Middle of the pack</span>
+    <span><span class="status status-poor">Poor</span> Concerning</span>
+    <span><span class="status status-neutral">Neutral</span> Context-dependent</span>
+    <span style="margin-left:auto;">Raw direction: <span class="trend-up">&uarr;</span> rising &nbsp; <span class="trend-down">&darr;</span> falling &nbsp; <span class="trend-flat">&rarr;</span> roughly flat</span>
+  </div>
+
+  <div class="filter-bar">
+    <span class="filter-label">Category:</span>
+    <button class="filter-btn active" data-cat="all">All</button>
+    <button class="filter-btn" data-cat="Identity">National Identity</button>
+    <button class="filter-btn" data-cat="Government">Government</button>
+    <button class="filter-btn" data-cat="Institutions">Institutions</button>
+    <button class="filter-btn" data-cat="Social">Social Fabric</button>
+    <button class="filter-btn" data-cat="Outlook">Outlook</button>
+    <div class="search-wrap">
+      <input type="search" id="searchBox" placeholder="Search measures…" aria-label="Search trends">
+    </div>
+  </div>
+
+  <div class="table-wrapper">
+    <table id="trendsTable" aria-label="American Trends Over Time">
+      <thead>
+        <tr>
+          <th data-sort="text">Measure</th>
+          <th data-sort="text">Category</th>
+          <th>Trend</th>
+          <th>Then &rarr; Now</th>
+          <th data-sort="num">Change</th>
+          <th>Assessment</th>
+          <th>Source</th>
+          <th class="notes-cell">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- IDENTITY -->
+        <tr data-cat="Identity">
+          <td>American Pride ("Extremely Proud")</td>
+          <td><span class="cat cat-Identity">National Identity</span></td>
+          <td><span class="sparkline-wrap" data-suffix="%" data-series='[{"y":2001,"v":55},{"y":2003,"v":70},{"y":2016,"v":47},{"y":2018,"v":47},{"y":2025,"v":41},{"y":2026,"v":33}]'></span></td>
+          <td class="then-now">2001: 55% <span class="arrow">&rarr;</span> 2026: 33%</td>
+          <td class="change-cell">-22 pts <span class="trend-down">&darr;</span></td>
+          <td><span class="status status-ok">OK</span></td>
+          <td><a class="source-link" href="https://news.gallup.com/poll/711938/american-pride-falls-year-record-low.aspx" target="_blank" rel="noopener">Gallup</a></td>
+          <td class="notes-cell">New 25-year record low. Peaked near 70% after 9/11 (2003) and held above majority levels through 2017. Decline is sharpest among younger adults.</td>
+        </tr>
+
+        <!-- GOVERNMENT -->
+        <tr data-cat="Government">
+          <td>Trust in Federal Government</td>
+          <td><span class="cat cat-Government">Government</span></td>
+          <td><span class="sparkline-wrap" data-suffix="%" data-series='[{"y":1958,"v":73},{"y":1964,"v":77},{"y":1980,"v":25},{"y":2000,"v":44},{"y":2008,"v":31},{"y":2016,"v":33},{"y":2024,"v":22},{"y":2025,"v":17}]'></span></td>
+          <td class="then-now">1958: 73% <span class="arrow">&rarr;</span> 2025: 17%</td>
+          <td class="change-cell">-56 pts <span class="trend-down">&darr;</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td><a class="source-link" href="https://www.pewresearch.org/politics/2025/12/04/public-trust-in-government-1958-2025/" target="_blank" rel="noopener">Pew Research Center</a></td>
+          <td class="notes-cell">Peaked at 77% in 1964, before Vietnam and Watergate. The 2025 reading is among the lowest in nearly seven decades of tracking.</td>
+        </tr>
+
+        <tr data-cat="Government">
+          <td>Confidence in Congress</td>
+          <td><span class="cat cat-Government">Government</span></td>
+          <td><span class="sparkline-wrap" data-suffix="%" data-series='[{"y":1973,"v":42},{"y":2001,"v":43},{"y":2013,"v":10},{"y":2015,"v":7},{"y":2023,"v":7},{"y":2024,"v":8}]'></span></td>
+          <td class="then-now">1973: 42% <span class="arrow">&rarr;</span> 2024: 8%</td>
+          <td class="change-cell">-34 pts <span class="trend-down">&darr;</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td><a class="source-link" href="https://news.gallup.com/poll/1600/congress-public.aspx" target="_blank" rel="noopener">Gallup</a></td>
+          <td class="notes-cell">Congress has ranked last of every institution Gallup tracks every year since 2010.</td>
+        </tr>
+
+        <tr data-cat="Government">
+          <td>Confidence in the Supreme Court</td>
+          <td><span class="cat cat-Government">Government</span></td>
+          <td><span class="sparkline-wrap" data-suffix="%" data-series='[{"y":1988,"v":56},{"y":2000,"v":80},{"y":2022,"v":25},{"y":2024,"v":30}]'></span></td>
+          <td class="then-now">1988: 56% <span class="arrow">&rarr;</span> 2024: 30%</td>
+          <td class="change-cell">-26 pts <span class="trend-down">&darr;</span></td>
+          <td><span class="status status-ok">OK</span></td>
+          <td><a class="source-link" href="https://news.gallup.com/poll/4732/supreme-court.aspx" target="_blank" rel="noopener">Gallup</a></td>
+          <td class="notes-cell">Fell to a record-low 25% in 2022 after the Dobbs decision, then partly rebounded. Gallup asks several differently worded court questions; this tracks its "confidence in institutions" series.</td>
+        </tr>
+
+        <tr data-cat="Government">
+          <td>Political Independents</td>
+          <td><span class="cat cat-Government">Government</span></td>
+          <td><span class="sparkline-wrap" data-suffix="%" data-series='[{"y":1995,"v":39},{"y":2011,"v":40},{"y":2016,"v":42},{"y":2024,"v":43},{"y":2025,"v":45}]'></span></td>
+          <td class="then-now">1995: 39% <span class="arrow">&rarr;</span> 2025: 45%</td>
+          <td class="change-cell">+6 pts <span class="trend-up">&uarr;</span></td>
+          <td><span class="status status-neutral">Neutral</span></td>
+          <td><a class="source-link" href="https://news.gallup.com/poll/15370/party-affiliation.aspx" target="_blank" rel="noopener">Gallup</a></td>
+          <td class="notes-cell">Record-high 45% now identify as independent, versus a roughly even 27%/27% split between Democrats and Republicans.</td>
+        </tr>
+
+        <!-- INSTITUTIONS -->
+        <tr data-cat="Institutions">
+          <td>Trust in Mass Media</td>
+          <td><span class="cat cat-Institutions">Institutions</span></td>
+          <td><span class="sparkline-wrap" data-suffix="%" data-series='[{"y":1972,"v":70},{"y":1997,"v":53},{"y":2004,"v":44},{"y":2018,"v":45},{"y":2024,"v":31},{"y":2025,"v":28}]'></span></td>
+          <td class="then-now">1972: 70% <span class="arrow">&rarr;</span> 2025: 28%</td>
+          <td class="change-cell">-42 pts <span class="trend-down">&darr;</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td><a class="source-link" href="https://news.gallup.com/poll/695762/trust-media-new-low.aspx" target="_blank" rel="noopener">Gallup</a></td>
+          <td class="notes-cell">New record low in 2025. Gallup's 1970s readings ranged 68&ndash;72%; 70% is used here as a representative midpoint.</td>
+        </tr>
+
+        <tr data-cat="Institutions">
+          <td>Confidence in Public Schools</td>
+          <td><span class="cat cat-Institutions">Institutions</span></td>
+          <td><span class="sparkline-wrap" data-suffix="%" data-series='[{"y":1973,"v":58},{"y":1987,"v":50},{"y":2014,"v":26},{"y":2020,"v":41},{"y":2024,"v":32},{"y":2025,"v":28}]'></span></td>
+          <td class="then-now">1973: 58% <span class="arrow">&rarr;</span> 2025: 28%</td>
+          <td class="change-cell">-30 pts <span class="trend-down">&darr;</span></td>
+          <td><span class="status status-ok">OK</span></td>
+          <td><a class="source-link" href="https://news.gallup.com/poll/1597/confidence-institutions.aspx" target="_blank" rel="noopener">Gallup</a></td>
+          <td class="notes-cell">A pandemic-era bump to 41% (2020) reversed to a near-record-low by 2025.</td>
+        </tr>
+
+        <tr data-cat="Institutions">
+          <td>Confidence in Police</td>
+          <td><span class="cat cat-Institutions">Institutions</span></td>
+          <td><span class="sparkline-wrap" data-suffix="%" data-series='[{"y":1993,"v":52},{"y":2004,"v":64},{"y":2020,"v":48},{"y":2023,"v":43},{"y":2025,"v":51}]'></span></td>
+          <td class="then-now">1993: 52% <span class="arrow">&rarr;</span> 2025: 51%</td>
+          <td class="change-cell">-1 pt <span class="trend-flat">&rarr;</span></td>
+          <td><span class="status status-ok">OK</span></td>
+          <td><a class="source-link" href="https://news.gallup.com/poll/647303/confidence-institutions-mostly-flat-police.aspx" target="_blank" rel="noopener">Gallup</a></td>
+          <td class="notes-cell">Fell to a record-low 43% in 2023 after the 2020 protests, then recovered &mdash; one of the few institutions to rebound.</td>
+        </tr>
+
+        <tr data-cat="Institutions">
+          <td>Confidence in Banks</td>
+          <td><span class="cat cat-Institutions">Institutions</span></td>
+          <td><span class="sparkline-wrap" data-suffix="%" data-series='[{"y":1979,"v":60},{"y":1991,"v":30},{"y":2004,"v":53},{"y":2009,"v":22},{"y":2023,"v":26}]'></span></td>
+          <td class="then-now">1979: 60% <span class="arrow">&rarr;</span> 2023: 26%</td>
+          <td class="change-cell">-34 pts <span class="trend-down">&darr;</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td><a class="source-link" href="https://news.gallup.com/poll/1597/confidence-institutions.aspx" target="_blank" rel="noopener">Gallup</a></td>
+          <td class="notes-cell">Never recovered from the 2008 financial crisis. Confidence in "big business" specifically runs even lower.</td>
+        </tr>
+
+        <tr data-cat="Institutions">
+          <td>Trust in Scientists</td>
+          <td><span class="cat cat-Institutions">Institutions</span></td>
+          <td><span class="sparkline-wrap" data-suffix="%" data-series='[{"y":2016,"v":76},{"y":2019,"v":86},{"y":2020,"v":87},{"y":2023,"v":73},{"y":2024,"v":76},{"y":2025,"v":77}]'></span></td>
+          <td class="then-now">2016: 76% <span class="arrow">&rarr;</span> 2025: 77%</td>
+          <td class="change-cell">+1 pt <span class="trend-flat">&rarr;</span></td>
+          <td><span class="status status-good">Good</span></td>
+          <td><a class="source-link" href="https://www.pewresearch.org/science/2024/11/14/public-trust-in-scientists-and-views-on-their-role-in-policymaking/" target="_blank" rel="noopener">Pew Research Center</a></td>
+          <td class="notes-cell">Peaked at 87% early in the COVID-19 pandemic, dropped to 73% by 2023, and has since partly recovered.</td>
+        </tr>
+
+        <!-- SOCIAL FABRIC -->
+        <tr data-cat="Social">
+          <td>Church/Religious Membership</td>
+          <td><span class="cat cat-Social">Social Fabric</span></td>
+          <td><span class="sparkline-wrap" data-suffix="%" data-series='[{"y":1937,"v":73},{"y":1999,"v":70},{"y":2010,"v":61},{"y":2018,"v":50},{"y":2020,"v":47},{"y":2024,"v":45}]'></span></td>
+          <td class="then-now">1937: 73% <span class="arrow">&rarr;</span> 2024: 45%</td>
+          <td class="change-cell">-28 pts <span class="trend-down">&darr;</span></td>
+          <td><span class="status status-ok">OK</span></td>
+          <td><a class="source-link" href="https://news.gallup.com/poll/341963/church-membership-falls-below-majority-first-time.aspx" target="_blank" rel="noopener">Gallup</a></td>
+          <td class="notes-cell">Fell below 50% for the first time ever in 2020, a threshold crossed after more than 80 years above it.</td>
+        </tr>
+
+        <tr data-cat="Social">
+          <td>Labor Union Membership</td>
+          <td><span class="cat cat-Social">Social Fabric</span></td>
+          <td><span class="sparkline-wrap" data-suffix="%" data-series='[{"y":1983,"v":20.1},{"y":2010,"v":11.9},{"y":2015,"v":11.1},{"y":2018,"v":10.5},{"y":2024,"v":9.9},{"y":2025,"v":10.0}]'></span></td>
+          <td class="then-now">1983: 20.1% <span class="arrow">&rarr;</span> 2025: 10.0%</td>
+          <td class="change-cell">-10.1 pts <span class="trend-down">&darr;</span></td>
+          <td><span class="status status-ok">OK</span></td>
+          <td><a class="source-link" href="https://www.bls.gov/news.release/union2.nr0.htm" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics</a></td>
+          <td class="notes-cell">Roughly cut in half since 1983, the first year of comparable data; fell below 10% for the first time in 2024.</td>
+        </tr>
+
+        <tr data-cat="Social">
+          <td>Marriage Rate</td>
+          <td><span class="cat cat-Social">Social Fabric</span></td>
+          <td><span class="sparkline-wrap" data-suffix=" per 1,000" data-series='[{"y":1946,"v":16.0},{"y":1990,"v":9.8},{"y":2000,"v":8.2},{"y":2019,"v":6.0},{"y":2020,"v":5.1},{"y":2023,"v":6.1}]'></span></td>
+          <td class="then-now">1946: 16.0 <span class="arrow">&rarr;</span> 2023: 6.1 <span class="of-total">/1,000</span></td>
+          <td class="change-cell">-9.9 <span class="trend-down">&darr;</span></td>
+          <td><span class="status status-ok">OK</span></td>
+          <td><a class="source-link" href="https://www.cdc.gov/nchs/fastats/marriage-divorce.htm" target="_blank" rel="noopener">CDC / NCHS</a></td>
+          <td class="notes-cell">About a third of the post-WWII rate. Hit a record low during the 2020 pandemic before a slight rebound.</td>
+        </tr>
+
+        <tr data-cat="Social">
+          <td>Interpersonal Trust ("Most People Can Be Trusted")</td>
+          <td><span class="cat cat-Social">Social Fabric</span></td>
+          <td><span class="sparkline-wrap" data-suffix="%" data-series='[{"y":1972,"v":46},{"y":2018,"v":34},{"y":2024,"v":34}]'></span></td>
+          <td class="then-now">1972: 46% <span class="arrow">&rarr;</span> 2024: 34%</td>
+          <td class="change-cell">-12 pts <span class="trend-down">&darr;</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td><a class="source-link" href="https://www.pewresearch.org/2025/05/08/americans-trust-in-one-another/" target="_blank" rel="noopener">General Social Survey / Pew</a></td>
+          <td class="notes-cell">Share saying "most people can be trusted" has fallen by roughly a quarter since the early 1970s. Only sparse data points are available for this series.</td>
+        </tr>
+
+        <!-- OUTLOOK -->
+        <tr data-cat="Outlook">
+          <td>Satisfaction With Direction of the Country</td>
+          <td><span class="cat cat-Outlook">Outlook</span></td>
+          <td><span class="sparkline-wrap" data-suffix="%" data-series='[{"y":1979,"v":19},{"y":1999,"v":71},{"y":2008,"v":7},{"y":2025,"v":18},{"y":2026,"v":34}]'></span></td>
+          <td class="then-now">1979: 19% <span class="arrow">&rarr;</span> 2026: 34%</td>
+          <td class="change-cell">+15 pts <span class="trend-up">&uarr;</span></td>
+          <td><span class="status status-ok">OK</span></td>
+          <td><a class="source-link" href="https://news.gallup.com/poll/1669/general-mood-country.aspx" target="_blank" rel="noopener">Gallup</a></td>
+          <td class="notes-cell">Extremely volatile month to month &mdash; ranged from a record 71% (1999) to a record-low 7% (2008). Has averaged just 25% since 2006, well below the 37% historical average.</td>
+        </tr>
+
+        <tr data-cat="Outlook">
+          <td>Belief Children Will Have a Better Life</td>
+          <td><span class="cat cat-Outlook">Outlook</span></td>
+          <td><span class="sparkline-wrap" data-suffix="%" data-series='[{"y":1999,"v":71},{"y":2001,"v":71},{"y":2011,"v":44},{"y":2012,"v":49},{"y":2022,"v":42}]'></span></td>
+          <td class="then-now">1999: 71% <span class="arrow">&rarr;</span> 2022: 42%</td>
+          <td class="change-cell">-29 pts <span class="trend-down">&darr;</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td><a class="source-link" href="https://news.gallup.com/poll/403760/americans-less-optimistic-next-generation-future.aspx" target="_blank" rel="noopener">Gallup</a></td>
+          <td class="notes-cell">All-time low as of the most recent reading (2022). Distinct from differently worded "American Dream" polls run by other organizations, which report different figures.</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <p style="margin-top:1.5rem;">
+    <a href="ranks.html" class="btn btn-secondary">View International Rankings</a>
+    &nbsp;
+    <a href="sources.html" class="btn btn-secondary">Data Sources</a>
+  </p>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h4>National Assessment Day</h4>
+      <p>An annual civic tradition encouraging Americans to honestly assess their nation's standing among the nations of the world.</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="synopsis.html">Synopsis</a></li>
+        <li><a href="ranks.html">Rankings</a></li>
+        <li><a href="trends.html">Trends</a></li>
+        <li><a href="barriers.html">Progress</a></li>
+        <li><a href="sources.html">Sources</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="mailto:feedback@nationalassessmentday.com" style="color:rgba(255,255,255,0.75);">feedback@nationalassessmentday.com</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 National Assessment Day</span>
+    <span>Data sourced from Gallup, Pew Research, the General Social Survey, BLS, and CDC.</span>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.getElementById('main-nav').classList.toggle('open');
+  });
+
+  // Category filter
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const rows = document.querySelectorAll('#trendsTable tbody tr');
+
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const cat = this.dataset.cat;
+      filterBtns.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      applyFilters();
+    });
+  });
+
+  // Search
+  document.getElementById('searchBox').addEventListener('input', applyFilters);
+
+  function applyFilters() {
+    const activeCat = document.querySelector('.filter-btn.active').dataset.cat;
+    const term = document.getElementById('searchBox').value.toLowerCase().trim();
+
+    rows.forEach(function(row) {
+      const catMatch = activeCat === 'all' || row.dataset.cat === activeCat;
+      const textMatch = !term || row.textContent.toLowerCase().includes(term);
+      row.classList.toggle('hidden', !(catMatch && textMatch));
+    });
+  }
+
+  // Table sort
+  const table = document.getElementById('trendsTable');
+  const headers = table.querySelectorAll('thead th[data-sort]');
+
+  headers.forEach(function(header) {
+    header.style.cursor = 'pointer';
+    header.addEventListener('click', function() {
+      const isAsc = !this.classList.contains('sort-asc');
+      headers.forEach(function(h) { h.classList.remove('sort-asc', 'sort-desc'); });
+      this.classList.add(isAsc ? 'sort-asc' : 'sort-desc');
+
+      const colIdx = Array.from(this.parentNode.children).indexOf(this);
+      const tbody = table.querySelector('tbody');
+      const rowsArr = Array.from(tbody.querySelectorAll('tr'));
+      const sortType = this.dataset.sort;
+
+      rowsArr.sort(function(a, b) {
+        const aCell = a.cells[colIdx];
+        const bCell = b.cells[colIdx];
+        if (!aCell || !bCell) return 0;
+
+        let aVal = aCell.textContent.replace(/\s+/g, ' ').trim();
+        let bVal = bCell.textContent.replace(/\s+/g, ' ').trim();
+
+        if (sortType === 'num') {
+          const aNum = parseFloat(aVal);
+          const bNum = parseFloat(bVal);
+          if (!isNaN(aNum) && !isNaN(bNum)) {
+            return isAsc ? aNum - bNum : bNum - aNum;
+          }
+        }
+        return isAsc ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+      });
+
+      rowsArr.forEach(function(row) { tbody.appendChild(row); });
+    });
+  });
+
+  // Handle ?cat= URL parameter to pre-filter
+  const params = new URLSearchParams(window.location.search);
+  const catParam = params.get('cat');
+  if (catParam) {
+    const btn = document.querySelector('.filter-btn[data-cat="' + catParam + '"]');
+    if (btn) {
+      document.querySelector('.filter-btn.active').classList.remove('active');
+      btn.classList.add('active');
+      applyFilters();
+    }
+  }
+
+  // Sparkline rendering
+  const svgNS = 'http://www.w3.org/2000/svg';
+
+  function renderSparklines() {
+    document.querySelectorAll('.sparkline-wrap').forEach(function(wrap) {
+      const series = JSON.parse(wrap.dataset.series);
+      const suffix = wrap.dataset.suffix || '';
+      const w = 120, h = 34, pad = 4;
+      const values = series.map(function(d) { return d.v; });
+      const min = Math.min.apply(null, values);
+      const max = Math.max.apply(null, values);
+      const range = (max - min) || 1;
+      const n = series.length;
+
+      const points = series.map(function(d, i) {
+        const x = pad + (n === 1 ? (w - pad * 2) / 2 : (i / (n - 1)) * (w - pad * 2));
+        const y = h - pad - ((d.v - min) / range) * (h - pad * 2);
+        return { x: x, y: y, year: d.y, v: d.v };
+      });
+
+      const pathD = points.map(function(p, i) {
+        return (i === 0 ? 'M' : 'L') + p.x.toFixed(1) + ',' + p.y.toFixed(1);
+      }).join(' ');
+
+      const svg = document.createElementNS(svgNS, 'svg');
+      svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+
+      const svgTitle = document.createElementNS(svgNS, 'title');
+      svgTitle.textContent = series.map(function(d) { return d.y + ': ' + d.v + suffix; }).join('  →  ');
+      svg.appendChild(svgTitle);
+
+      const path = document.createElementNS(svgNS, 'path');
+      path.setAttribute('class', 'spark-line');
+      path.setAttribute('d', pathD);
+      svg.appendChild(path);
+
+      points.forEach(function(p, i) {
+        const dotClass = i === 0 ? 'spark-start' : (i === n - 1 ? 'spark-end' : 'spark-mid');
+        const dot = document.createElementNS(svgNS, 'circle');
+        dot.setAttribute('class', dotClass);
+        dot.setAttribute('cx', p.x.toFixed(1));
+        dot.setAttribute('cy', p.y.toFixed(1));
+        dot.setAttribute('r', i === n - 1 ? 3 : (i === 0 ? 2 : 1.5));
+        svg.appendChild(dot);
+
+        // Larger invisible hit target for hover tooltip
+        const hit = document.createElementNS(svgNS, 'circle');
+        hit.setAttribute('cx', p.x.toFixed(1));
+        hit.setAttribute('cy', p.y.toFixed(1));
+        hit.setAttribute('r', 7);
+        hit.setAttribute('fill', 'transparent');
+        const hitTitle = document.createElementNS(svgNS, 'title');
+        hitTitle.textContent = p.year + ': ' + p.v + suffix;
+        hit.appendChild(hitTitle);
+        svg.appendChild(hit);
+      });
+
+      wrap.appendChild(svg);
+    });
+  }
+
+  renderSparklines();
+</script>
+
+</body>
+</html>

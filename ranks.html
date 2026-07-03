@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rankings | National Assessment Day</title>
+  <meta name="description" content="U.S. international rankings across business, education, health, society, military, technology, and environment — updated annually.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Extra styles specific to the ranks page */
+    .rank-num {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .of-total {
+      font-size: 0.75rem;
+      color: var(--gray-600);
+    }
+    #ranksTable td:nth-child(4) { text-align: center; }
+    #ranksTable td:nth-child(5) { text-align: center; }
+    .notes-cell { font-size: 0.8rem; color: var(--gray-600); max-width: 220px; }
+    .source-link { font-size: 0.8rem; }
+    .hidden { display: none !important; }
+
+    .data-note {
+      background: #FFF8E1;
+      border-left: 4px solid #F0AD00;
+      padding: 0.75rem 1rem;
+      font-size: 0.85rem;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 1.25rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="site-name">National Assessment Day</span>
+      <span class="tagline">February 27 &bull; Annual U.S. Ranking Review</span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-controls="main-nav">&#9776;</button>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="synopsis.html">Synopsis</a></li>
+        <li><a href="ranks.html" class="active">Rankings</a></li>
+        <li><a href="trends.html">Trends</a></li>
+        <li><a href="barriers.html">Progress</a></li>
+        <li><a href="sources.html">Sources</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="page-header">
+    <h1>U.S. International Rankings</h1>
+    <p class="page-desc">Click any column header to sort. Use the category buttons or search box to filter.</p>
+  </div>
+
+  <div class="data-note">
+    <strong>Data note:</strong> Rankings reflect the most recent data available from each source.
+    "Rank" is the U.S. position in the referenced study (1 = best-performing or highest-ranked;
+    direction varies by metric — see Notes column). The <strong>Assessment</strong> column reflects our
+    judgment of whether the U.S. position is favorable, middling, or a cause for concern.
+    <a href="about.html#archive">Historical data (2012–2015)</a> is available in the archive.
+  </div>
+
+  <div class="legend">
+    <span>Assessment key:</span>
+    <span><span class="status status-good">Good</span> Top tier</span>
+    <span><span class="status status-ok">OK</span> Middle of the pack</span>
+    <span><span class="status status-poor">Poor</span> Concerning</span>
+    <span><span class="status status-neutral">Neutral</span> Context-dependent</span>
+    <span style="margin-left:auto;">Trend: <span class="trend-up">↑</span> improving &nbsp; <span class="trend-down">↓</span> declining &nbsp; <span class="trend-flat">→</span> stable</span>
+  </div>
+
+  <div class="filter-bar">
+    <span class="filter-label">Category:</span>
+    <button class="filter-btn active" data-cat="all">All</button>
+    <button class="filter-btn" data-cat="Business">Business</button>
+    <button class="filter-btn" data-cat="Education">Education</button>
+    <button class="filter-btn" data-cat="Health">Health</button>
+    <button class="filter-btn" data-cat="Society">Society</button>
+    <button class="filter-btn" data-cat="Military">Military</button>
+    <button class="filter-btn" data-cat="Technology">Technology</button>
+    <button class="filter-btn" data-cat="Environment">Environment</button>
+    <div class="search-wrap">
+      <input type="search" id="searchBox" placeholder="Search measures…" aria-label="Search rankings">
+    </div>
+  </div>
+
+  <div class="table-wrapper">
+    <table id="ranksTable" aria-label="U.S. International Rankings">
+      <thead>
+        <tr>
+          <th data-sort="text">Measure</th>
+          <th data-sort="text">Category</th>
+          <th data-sort="num" title="U.S. rank — 1 = top of list">U.S. Rank</th>
+          <th data-sort="num"># Countries</th>
+          <th data-sort="text">Score / Value</th>
+          <th>Source</th>
+          <th data-sort="num">Year</th>
+          <th>Trend</th>
+          <th>Assessment</th>
+          <th class="notes-cell">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- BUSINESS -->
+        <tr data-cat="Business">
+          <td>World Competitiveness Ranking (IMD)</td>
+          <td><span class="cat cat-Business">Business</span></td>
+          <td class="rank-num">12 <span class="of-total">/ 67</span></td>
+          <td>67</td>
+          <td>—</td>
+          <td><a class="source-link" href="https://www.imd.org/centers/wcc/world-competitiveness-center/rankings/world-competitiveness-ranking/" target="_blank" rel="noopener">IMD World Competitiveness Center</a></td>
+          <td>2024</td>
+          <td><span class="trend-down" title="Declining">↓</span></td>
+          <td><span class="status status-ok">OK</span></td>
+          <td class="notes-cell">Note: WEF Global Competitiveness Report was discontinued in 2020. IMD is the benchmark alternative. US was WEF #1 in 2018; now 12th in IMD. Singapore leads in 2025 IMD.</td>
+        </tr>
+
+        <tr data-cat="Business">
+          <td>Corruption Perceptions Index</td>
+          <td><span class="cat cat-Business">Business</span></td>
+          <td class="rank-num">28 <span class="of-total">/ 180</span></td>
+          <td>180</td>
+          <td>64 / 100</td>
+          <td><a class="source-link" href="https://www.transparency.org/en/cpi/2024/index/usa" target="_blank" rel="noopener">Transparency International</a></td>
+          <td>2024</td>
+          <td><span class="trend-down" title="Declining">↓</span></td>
+          <td><span class="status status-ok">OK</span></td>
+          <td class="notes-cell">Rank 1 = least corrupt. Score of 64 is the lowest the US has ever recorded since 2012. Denmark is #1. Score was 76 in 2015.</td>
+        </tr>
+
+        <tr data-cat="Business">
+          <td>Number of Billionaires</td>
+          <td><span class="cat cat-Business">Business</span></td>
+          <td class="rank-num">1 <span class="of-total">/ 200</span></td>
+          <td>200</td>
+          <td>~900 billionaires</td>
+          <td><a class="source-link" href="https://www.forbes.com" target="_blank" rel="noopener">Forbes</a></td>
+          <td>2025</td>
+          <td><span class="trend-up" title="Increasing">↑</span></td>
+          <td><span class="status status-neutral">Neutral</span></td>
+          <td class="notes-cell">U.S. has nearly 4× more billionaires than China (#2). A sign of extreme wealth concentration at the top.</td>
+        </tr>
+
+        <tr data-cat="Business">
+          <td>Ease of Doing Business</td>
+          <td><span class="cat cat-Business">Business</span></td>
+          <td class="rank-num">6 <span class="of-total">/ 190</span></td>
+          <td>190</td>
+          <td>84.0 / 100</td>
+          <td><a class="source-link" href="https://www.worldbank.org" target="_blank" rel="noopener">World Bank</a></td>
+          <td>2020</td>
+          <td><span class="trend-flat">→</span></td>
+          <td><span class="status status-good">Good</span></td>
+          <td class="notes-cell">Index discontinued after 2020. New Zealand was #1. U.S. consistently strong in business environment.</td>
+        </tr>
+
+        <tr data-cat="Business">
+          <td>Income Inequality (Gini Index)</td>
+          <td><span class="cat cat-Business">Business</span></td>
+          <td class="rank-num">2 <span class="of-total">/ 38</span></td>
+          <td>38</td>
+          <td>0.418 Gini</td>
+          <td><a class="source-link" href="https://www.oecd.org/en/data/indicators/income-inequality.html" target="_blank" rel="noopener">OECD</a></td>
+          <td>2023</td>
+          <td><span class="trend-down">↓</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td class="notes-cell">Rank 1 = most unequal (Costa Rica is #1). US is the most unequal among wealthy democracies. Higher Gini = greater inequality.</td>
+        </tr>
+
+        <!-- EDUCATION -->
+        <tr data-cat="Education">
+          <td>PISA Math Literacy (age 15)</td>
+          <td><span class="cat cat-Education">Education</span></td>
+          <td class="rank-num">26 <span class="of-total">/ 81</span></td>
+          <td>81</td>
+          <td>465 points</td>
+          <td><a class="source-link" href="https://nces.ed.gov/surveys/pisa/pisa2022/" target="_blank" rel="noopener">OECD PISA / NCES</a></td>
+          <td>2022</td>
+          <td><span class="trend-down">↓</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td class="notes-cell">Below OECD average of 472. US score fell 13 pts from 2018 but ranking rose because other countries fell more. Singapore is #1 at 575.</td>
+        </tr>
+
+        <tr data-cat="Education">
+          <td>PISA Reading Literacy (age 15)</td>
+          <td><span class="cat cat-Education">Education</span></td>
+          <td class="rank-num">6 <span class="of-total">/ 81</span></td>
+          <td>81</td>
+          <td>504 points</td>
+          <td><a class="source-link" href="https://nces.ed.gov/surveys/pisa/pisa2022/" target="_blank" rel="noopener">OECD PISA / NCES</a></td>
+          <td>2022</td>
+          <td><span class="trend-flat">→</span></td>
+          <td><span class="status status-good">Good</span></td>
+          <td class="notes-cell">Above OECD average. US improved from 8th in 2018. Singapore is #1 at 543.</td>
+        </tr>
+
+        <tr data-cat="Education">
+          <td>PISA Science Literacy (age 15)</td>
+          <td><span class="cat cat-Education">Education</span></td>
+          <td class="rank-num">10 <span class="of-total">/ 81</span></td>
+          <td>81</td>
+          <td>499 points</td>
+          <td><a class="source-link" href="https://nces.ed.gov/surveys/pisa/pisa2022/" target="_blank" rel="noopener">OECD PISA / NCES</a></td>
+          <td>2022</td>
+          <td><span class="trend-up">↑</span></td>
+          <td><span class="status status-ok">OK</span></td>
+          <td class="notes-cell">Above OECD average. US improved from 11th in 2018. Singapore is #1 at 561.</td>
+        </tr>
+
+        <tr data-cat="Education">
+          <td>High School Graduation Rate</td>
+          <td><span class="cat cat-Education">Education</span></td>
+          <td class="rank-num">22 <span class="of-total">/ 38</span></td>
+          <td>38</td>
+          <td>87%</td>
+          <td><a class="source-link" href="https://www.oecd.org" target="_blank" rel="noopener">OECD</a></td>
+          <td>2023</td>
+          <td><span class="trend-up">↑</span></td>
+          <td><span class="status status-ok">OK</span></td>
+          <td class="notes-cell">Has improved but below OECD average. Most European nations exceed 90%.</td>
+        </tr>
+
+        <tr data-cat="Education">
+          <td>Tertiary Education Attainment (adults)</td>
+          <td><span class="cat cat-Education">Education</span></td>
+          <td class="rank-num">4 <span class="of-total">/ 38</span></td>
+          <td>38</td>
+          <td>50% of adults</td>
+          <td><a class="source-link" href="https://www.oecd.org" target="_blank" rel="noopener">OECD</a></td>
+          <td>2023</td>
+          <td><span class="trend-up">↑</span></td>
+          <td><span class="status status-good">Good</span></td>
+          <td class="notes-cell">U.S. leads in college attainment. Canada is #1; however, U.S. college costs are by far the highest globally.</td>
+        </tr>
+
+        <tr data-cat="Education">
+          <td>Nobel Laureates (cumulative)</td>
+          <td><span class="cat cat-Education">Education</span></td>
+          <td class="rank-num">1 <span class="of-total">/ 200</span></td>
+          <td>200</td>
+          <td>423 awards</td>
+          <td><a class="source-link" href="https://en.wikipedia.org/wiki/List_of_Nobel_laureates_by_country" target="_blank" rel="noopener">Nobel Prize.org / Wikipedia</a></td>
+          <td>2024</td>
+          <td><span class="trend-up">↑</span></td>
+          <td><span class="status status-good">Good</span></td>
+          <td class="notes-cell">U.S. leads by a wide margin (through 2024). United Kingdom is #2 with ~130. Reflects the strength of U.S. research universities in attracting global talent.</td>
+        </tr>
+
+        <!-- HEALTH -->
+        <tr data-cat="Health">
+          <td>Human Development Index</td>
+          <td><span class="cat cat-Health">Health</span></td>
+          <td class="rank-num">20 <span class="of-total">/ 193</span></td>
+          <td>193</td>
+          <td>0.927</td>
+          <td><a class="source-link" href="https://hdr.undp.org" target="_blank" rel="noopener">United Nations (UNDP)</a></td>
+          <td>2023</td>
+          <td><span class="trend-down">↓</span></td>
+          <td><span class="status status-ok">OK</span></td>
+          <td class="notes-cell">A composite of income, education, and life expectancy. U.S. was #4 in 2011; now #20. Switzerland is #1.</td>
+        </tr>
+
+        <tr data-cat="Health">
+          <td>Life Expectancy at Birth</td>
+          <td><span class="cat cat-Health">Health</span></td>
+          <td class="rank-num">46 <span class="of-total">/ 193</span></td>
+          <td>193</td>
+          <td>79.0 years</td>
+          <td><a class="source-link" href="https://www.healthsystemtracker.org/chart-collection/u-s-life-expectancy-compare-countries/" target="_blank" rel="noopener">Peterson-KFF / WHO</a></td>
+          <td>2024</td>
+          <td><span class="trend-up">↑</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td class="notes-cell">Rebounded slightly (79.0 in 2024) but still far behind peers — comparable countries average 82.7 yrs. Japan leads at 84.3 yrs.</td>
+        </tr>
+
+        <tr data-cat="Health">
+          <td>Infant Mortality Rate</td>
+          <td><span class="cat cat-Health">Health</span></td>
+          <td class="rank-num">32 <span class="of-total">/ 38</span></td>
+          <td>38</td>
+          <td>5.6 per 1,000 births</td>
+          <td><a class="source-link" href="https://www.americashealthrankings.org/publications/reports/2025-annual-report/international-comparison" target="_blank" rel="noopener">America's Health Rankings / OECD</a></td>
+          <td>2023</td>
+          <td><span class="trend-flat">→</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td class="notes-cell">Rank 32 of 38 OECD = among worst. Rank 1 = lowest infant mortality. OECD average is 4.2; US at 5.6 despite highest healthcare spending.</td>
+        </tr>
+
+        <tr data-cat="Health">
+          <td>Maternal Mortality Rate</td>
+          <td><span class="cat cat-Health">Health</span></td>
+          <td class="rank-num">38 <span class="of-total">/ 38</span></td>
+          <td>38</td>
+          <td>18.6 per 100,000</td>
+          <td><a class="source-link" href="https://www.commonwealthfund.org/publications/issue-briefs/2024/jun/insights-us-maternal-mortality-crisis-international-comparison" target="_blank" rel="noopener">Commonwealth Fund / WHO</a></td>
+          <td>2023</td>
+          <td><span class="trend-up">↑</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td class="notes-cell">Rank 38 of 38 = worst in OECD. Rate improved from 22.3 in 2022 but remains highest among wealthy nations. Most peers are below 5 per 100,000.</td>
+        </tr>
+
+        <tr data-cat="Health">
+          <td>Obesity — Adult Prevalence</td>
+          <td><span class="cat cat-Health">Health</span></td>
+          <td class="rank-num">1 <span class="of-total">/ 38</span></td>
+          <td>38</td>
+          <td>42.8% of adults</td>
+          <td><a class="source-link" href="https://www.oecd.org/en/publications/2023/11/health-at-a-glance-2023_e04f8239/full-report/overweight-and-obesity_590d3909.html" target="_blank" rel="noopener">OECD Health at a Glance</a></td>
+          <td>2023</td>
+          <td><span class="trend-down">↓</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td class="notes-cell">Rank 1 = most obese in OECD. 42.8% of US adults are obese vs. OECD average of 25.7%. Driving diabetes, heart disease, and lower life expectancy.</td>
+        </tr>
+
+        <tr data-cat="Health">
+          <td>Healthcare Spending (% of GDP)</td>
+          <td><span class="cat cat-Health">Health</span></td>
+          <td class="rank-num">1 <span class="of-total">/ 38</span></td>
+          <td>38</td>
+          <td>17.6% of GDP</td>
+          <td><a class="source-link" href="https://www.healthsystemtracker.org/chart-collection/health-spending-u-s-compare-countries/" target="_blank" rel="noopener">Peterson-KFF / OECD</a></td>
+          <td>2023</td>
+          <td><span class="trend-down">↓</span></td>
+          <td><span class="status status-neutral">Neutral</span></td>
+          <td class="notes-cell">U.S. spends ~2× the OECD average per capita yet ranks poorly on outcomes. OECD average is ~9.7%. Germany is #2 at 12.7%.</td>
+        </tr>
+
+        <tr data-cat="Health">
+          <td>Drug Overdose Deaths</td>
+          <td><span class="cat cat-Health">Health</span></td>
+          <td class="rank-num">1 <span class="of-total">/ 38</span></td>
+          <td>38</td>
+          <td>32 per 100,000</td>
+          <td><a class="source-link" href="https://www.cdc.gov" target="_blank" rel="noopener">CDC / OECD</a></td>
+          <td>2023</td>
+          <td><span class="trend-down">↓</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td class="notes-cell">Rank 1 = highest rate. The opioid / fentanyl crisis is the primary driver. No peer nation is close.</td>
+        </tr>
+
+        <tr data-cat="Health">
+          <td>Diabetes Prevalence</td>
+          <td><span class="cat cat-Health">Health</span></td>
+          <td class="rank-num">15 <span class="of-total">/ 193</span></td>
+          <td>193</td>
+          <td>10.7% of population</td>
+          <td><a class="source-link" href="https://idf.org" target="_blank" rel="noopener">International Diabetes Federation</a></td>
+          <td>2023</td>
+          <td><span class="trend-down">↓</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td class="notes-cell">High among developed nations. Linked to obesity epidemic and sedentary lifestyles.</td>
+        </tr>
+
+        <tr data-cat="Health">
+          <td>Preventable Deaths Rate</td>
+          <td><span class="cat cat-Health">Health</span></td>
+          <td class="rank-num">38 <span class="of-total">/ 38</span></td>
+          <td>38</td>
+          <td>190 per 100,000</td>
+          <td><a class="source-link" href="https://www.commonwealthfund.org" target="_blank" rel="noopener">Commonwealth Fund</a></td>
+          <td>2023</td>
+          <td><span class="trend-down">↓</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td class="notes-cell">Rank 38 = worst in OECD. Deaths that could be avoided with timely and effective health care.</td>
+        </tr>
+
+        <!-- SOCIETY -->
+        <tr data-cat="Society">
+          <td>Incarceration Rate</td>
+          <td><span class="cat cat-Society">Society</span></td>
+          <td class="rank-num">4 <span class="of-total">/ 200</span></td>
+          <td>200</td>
+          <td>608 per 100,000</td>
+          <td><a class="source-link" href="https://www.prisonpolicy.org/global/2024.html" target="_blank" rel="noopener">Prison Policy Initiative / World Prison Brief</a></td>
+          <td>2024</td>
+          <td><span class="trend-up">↑</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td class="notes-cell">Rank 4 globally — El Salvador (#1, 1,086), Cuba (#2, 637), and Rwanda (#3, 637) rank higher. Still ~5× the rate of Germany or France. Down from a peak of 750+ in 2008.</td>
+        </tr>
+
+        <tr data-cat="Society">
+          <td>Gun Deaths per Capita</td>
+          <td><span class="cat cat-Society">Society</span></td>
+          <td class="rank-num">1 <span class="of-total">/ 38</span></td>
+          <td>38</td>
+          <td>12 per 100,000</td>
+          <td><a class="source-link" href="https://www.who.int" target="_blank" rel="noopener">WHO / OECD</a></td>
+          <td>2023</td>
+          <td><span class="trend-down">↓</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td class="notes-cell">Rank 1 = highest in OECD by a large margin. Nearest OECD peer is Chile at ~3.7 per 100,000.</td>
+        </tr>
+
+        <tr data-cat="Society">
+          <td>Homicide Rate</td>
+          <td><span class="cat cat-Society">Society</span></td>
+          <td class="rank-num">1 <span class="of-total">/ 38</span></td>
+          <td>38</td>
+          <td>6.9 per 100,000</td>
+          <td><a class="source-link" href="https://www.unodc.org" target="_blank" rel="noopener">UNODC</a></td>
+          <td>2023</td>
+          <td><span class="trend-flat">→</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td class="notes-cell">Highest homicide rate among OECD nations. Japan is #1 (best) at 0.2 per 100,000.</td>
+        </tr>
+
+        <tr data-cat="Society">
+          <td>Happiness Index</td>
+          <td><span class="cat cat-Society">Society</span></td>
+          <td class="rank-num">24 <span class="of-total">/ 147</span></td>
+          <td>147</td>
+          <td>—</td>
+          <td><a class="source-link" href="https://worldhappiness.report" target="_blank" rel="noopener">UN World Happiness Report</a></td>
+          <td>2025</td>
+          <td><span class="trend-down">↓</span></td>
+          <td><span class="status status-ok">OK</span></td>
+          <td class="notes-cell">Lowest-ever US ranking. Researchers cite political polarization and declining social trust among young Americans. Finland is #1.</td>
+        </tr>
+
+        <tr data-cat="Society">
+          <td>Press Freedom Index</td>
+          <td><span class="cat cat-Society">Society</span></td>
+          <td class="rank-num">57 <span class="of-total">/ 180</span></td>
+          <td>180</td>
+          <td>—</td>
+          <td><a class="source-link" href="https://rsf.org" target="_blank" rel="noopener">Reporters Without Borders</a></td>
+          <td>2025</td>
+          <td><span class="trend-down">↓</span></td>
+          <td><span class="status status-ok">OK</span></td>
+          <td class="notes-cell">Lowest-ever US ranking; classified as "problematic." Driven by media consolidation, news deserts, and hostility toward journalists. Norway is #1.</td>
+        </tr>
+
+        <tr data-cat="Society">
+          <td>Democracy Index</td>
+          <td><span class="cat cat-Society">Society</span></td>
+          <td class="rank-num">28 <span class="of-total">/ 167</span></td>
+          <td>167</td>
+          <td>7.85 / 10</td>
+          <td><a class="source-link" href="https://www.eiu.com" target="_blank" rel="noopener">Economist Intelligence Unit</a></td>
+          <td>2024</td>
+          <td><span class="trend-flat">→</span></td>
+          <td><span class="status status-ok">OK</span></td>
+          <td class="notes-cell">Classified as "Flawed Democracy" since 2016. Score unchanged from 2023. High on electoral process (9.17) but low on political culture (6.25). Norway is #1.</td>
+        </tr>
+
+        <tr data-cat="Society">
+          <td>Gender Gap Index</td>
+          <td><span class="cat cat-Society">Society</span></td>
+          <td class="rank-num">43 <span class="of-total">/ 146</span></td>
+          <td>146</td>
+          <td>0.748 / 1.0</td>
+          <td><a class="source-link" href="https://www.weforum.org" target="_blank" rel="noopener">World Economic Forum</a></td>
+          <td>2024</td>
+          <td><span class="trend-flat">→</span></td>
+          <td><span class="status status-ok">OK</span></td>
+          <td class="notes-cell">Measures parity in economic, education, health, and political opportunity. Iceland is #1 at 0.935.</td>
+        </tr>
+
+        <tr data-cat="Society">
+          <td>Poverty Rate</td>
+          <td><span class="cat cat-Society">Society</span></td>
+          <td class="rank-num">37 <span class="of-total">/ 38</span></td>
+          <td>38</td>
+          <td>~18%</td>
+          <td><a class="source-link" href="https://www.oecd.org/en/data/indicators/poverty-rate.html" target="_blank" rel="noopener">OECD</a></td>
+          <td>2023</td>
+          <td><span class="trend-flat">→</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td class="notes-cell">Rank 37 of 38 = 2nd highest poverty in OECD (only Costa Rica is higher). OECD measure = share below 50% of median income. Czech Republic has the lowest at ~5.5%.</td>
+        </tr>
+
+        <!-- MILITARY -->
+        <tr data-cat="Military">
+          <td>Military Expenditure</td>
+          <td><span class="cat cat-Military">Military</span></td>
+          <td class="rank-num">1 <span class="of-total">/ 170</span></td>
+          <td>170</td>
+          <td>$997 billion</td>
+          <td><a class="source-link" href="https://www.sipri.org/media/press-release/2025/unprecedented-rise-global-military-expenditure-european-and-middle-east-spending-surges" target="_blank" rel="noopener">SIPRI</a></td>
+          <td>2024</td>
+          <td><span class="trend-up">↑</span></td>
+          <td><span class="status status-neutral">Neutral</span></td>
+          <td class="notes-cell">U.S. accounts for ~37% of global military spending — more than the next 8 countries combined. China is #2 at ~$311B. Whether this level is appropriate is debated.</td>
+        </tr>
+
+        <tr data-cat="Military">
+          <td>Global Peace Index</td>
+          <td><span class="cat cat-Military">Military</span></td>
+          <td class="rank-num">128 <span class="of-total">/ 163</span></td>
+          <td>163</td>
+          <td>—</td>
+          <td><a class="source-link" href="https://www.economicsandpeace.org/global-peace-index/" target="_blank" rel="noopener">Institute for Economics &amp; Peace</a></td>
+          <td>2025</td>
+          <td><span class="trend-up">↑</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td class="notes-cell">Rank 1 = most peaceful. U.S. ranks below South Africa, Kenya, and Uganda. Scores poorly on gun violence, militarization, and societal conflict. Iceland is #1.</td>
+        </tr>
+
+        <tr data-cat="Military">
+          <td>Arms Exports (market share)</td>
+          <td><span class="cat cat-Military">Military</span></td>
+          <td class="rank-num">1 <span class="of-total">/ 100</span></td>
+          <td>100</td>
+          <td>43% of global market</td>
+          <td><a class="source-link" href="https://www.sipri.org/publications/2025/sipri-fact-sheets/trends-international-arms-transfers-2024" target="_blank" rel="noopener">SIPRI</a></td>
+          <td>2024</td>
+          <td><span class="trend-up">↑</span></td>
+          <td><span class="status status-neutral">Neutral</span></td>
+          <td class="notes-cell">U.S. share rose from 35% (2015–19) to 43% (2020–24). Top recipients: Japan, Australia, South Korea. Russia is #2 exporter. Revenue vs. proliferation implications are contested.</td>
+        </tr>
+
+        <tr data-cat="Military">
+          <td>Nuclear Warhead Stockpile</td>
+          <td><span class="cat cat-Military">Military</span></td>
+          <td class="rank-num">2 <span class="of-total">/ 9</span></td>
+          <td>9</td>
+          <td>~5,550 warheads</td>
+          <td><a class="source-link" href="https://www.sipri.org" target="_blank" rel="noopener">SIPRI</a></td>
+          <td>2024</td>
+          <td><span class="trend-flat">→</span></td>
+          <td><span class="status status-neutral">Neutral</span></td>
+          <td class="notes-cell">Russia leads (~5,580). U.S. and Russia together hold ~90% of global nuclear weapons.</td>
+        </tr>
+
+        <!-- TECHNOLOGY -->
+        <tr data-cat="Technology">
+          <td>Global Innovation Index</td>
+          <td><span class="cat cat-Technology">Technology</span></td>
+          <td class="rank-num">3 <span class="of-total">/ 133</span></td>
+          <td>133</td>
+          <td>61.73 / 100</td>
+          <td><a class="source-link" href="https://www.wipo.int" target="_blank" rel="noopener">WIPO</a></td>
+          <td>2024</td>
+          <td><span class="trend-flat">→</span></td>
+          <td><span class="status status-good">Good</span></td>
+          <td class="notes-cell">Consistently top 3. Switzerland is #1. U.S. leads in venture capital and knowledge outputs.</td>
+        </tr>
+
+        <tr data-cat="Technology">
+          <td>R&amp;D Spending (% of GDP)</td>
+          <td><span class="cat cat-Technology">Technology</span></td>
+          <td class="rank-num">4 <span class="of-total">/ 38</span></td>
+          <td>38</td>
+          <td>3.45% of GDP</td>
+          <td><a class="source-link" href="https://ssti.org/blog/useful-stats-international-comparison-rd-expenditures" target="_blank" rel="noopener">OECD / SSTI</a></td>
+          <td>2023</td>
+          <td><span class="trend-up">↑</span></td>
+          <td><span class="status status-good">Good</span></td>
+          <td class="notes-cell">4th among OECD nations. Israel leads at 6.35%, South Korea at 4.96%, Sweden at 3.60%. R&amp;D intensity is above OECD average of 2.7%.</td>
+        </tr>
+
+        <tr data-cat="Technology">
+          <td>Fixed Broadband Download Speed</td>
+          <td><span class="cat cat-Technology">Technology</span></td>
+          <td class="rank-num">7 <span class="of-total">/ 200</span></td>
+          <td>200</td>
+          <td>289 Mbps avg.</td>
+          <td><a class="source-link" href="https://www.ookla.com" target="_blank" rel="noopener">Ookla Speedtest Global Index</a></td>
+          <td>2025</td>
+          <td><span class="trend-up">↑</span></td>
+          <td><span class="status status-good">Good</span></td>
+          <td class="notes-cell">Strong improvement in recent years. Singapore is #1 at 372 Mbps. Rural access gaps remain a challenge. Mobile speed ranks 13th at 171 Mbps.</td>
+        </tr>
+
+        <tr data-cat="Technology">
+          <td>Patent Applications</td>
+          <td><span class="cat cat-Technology">Technology</span></td>
+          <td class="rank-num">3 <span class="of-total">/ 150</span></td>
+          <td>150</td>
+          <td>~248,000 / yr</td>
+          <td><a class="source-link" href="https://www.wipo.int" target="_blank" rel="noopener">WIPO</a></td>
+          <td>2023</td>
+          <td><span class="trend-flat">→</span></td>
+          <td><span class="status status-good">Good</span></td>
+          <td class="notes-cell">China is #1, Japan is #2. U.S. output is high but China has rapidly closed the gap.</td>
+        </tr>
+
+        <tr data-cat="Technology">
+          <td>AI Research Output</td>
+          <td><span class="cat cat-Technology">Technology</span></td>
+          <td class="rank-num">1 <span class="of-total">/ 100</span></td>
+          <td>100</td>
+          <td>Top rank</td>
+          <td><a class="source-link" href="https://www.stanford.edu/ai-index" target="_blank" rel="noopener">Stanford AI Index</a></td>
+          <td>2024</td>
+          <td><span class="trend-up">↑</span></td>
+          <td><span class="status status-good">Good</span></td>
+          <td class="notes-cell">U.S. leads in AI research, private investment, and notable AI systems produced. China is a close second in publications.</td>
+        </tr>
+
+        <!-- ENVIRONMENT -->
+        <tr data-cat="Environment">
+          <td>CO₂ Emissions per Capita</td>
+          <td><span class="cat cat-Environment">Environment</span></td>
+          <td class="rank-num">16 <span class="of-total">/ 200</span></td>
+          <td>200</td>
+          <td>13.8 metric tons</td>
+          <td><a class="source-link" href="https://ourworldindata.org/co2/country/united-states" target="_blank" rel="noopener">Our World in Data / IEA</a></td>
+          <td>2023</td>
+          <td><span class="trend-down">↓</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td class="notes-cell">Rank 16 = 16th highest per capita (rank 1 = highest). Smaller fossil-fuel-rich nations lead (Qatar, Kuwait, UAE). U.S. emits ~3× the global average per person.</td>
+        </tr>
+
+        <tr data-cat="Environment">
+          <td>Environmental Performance Index</td>
+          <td><span class="cat cat-Environment">Environment</span></td>
+          <td class="rank-num">35 <span class="of-total">/ 180</span></td>
+          <td>180</td>
+          <td>57.2 / 100</td>
+          <td><a class="source-link" href="https://epi.yale.edu/country/2024/USA" target="_blank" rel="noopener">Yale / Columbia EPI</a></td>
+          <td>2024</td>
+          <td><span class="trend-flat">→</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td class="notes-cell">Cited for "insufficiently ambitious environmental and climate policies." Covers air quality, climate, biodiversity, and water. Estonia is #1 at 75.3.</td>
+        </tr>
+
+        <tr data-cat="Environment">
+          <td>Renewable Energy Share of Electricity</td>
+          <td><span class="cat cat-Environment">Environment</span></td>
+          <td class="rank-num">38 <span class="of-total">/ 80</span></td>
+          <td>80</td>
+          <td>22% of electricity</td>
+          <td><a class="source-link" href="https://www.iea.org" target="_blank" rel="noopener">International Energy Agency</a></td>
+          <td>2023</td>
+          <td><span class="trend-up">↑</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td class="notes-cell">Growing rapidly (solar, wind), but well behind Europe. Norway and Iceland exceed 90% renewables.</td>
+        </tr>
+
+        <tr data-cat="Environment">
+          <td>Plastic Waste per Capita</td>
+          <td><span class="cat cat-Environment">Environment</span></td>
+          <td class="rank-num">3 <span class="of-total">/ 100</span></td>
+          <td>100</td>
+          <td>130 kg / year</td>
+          <td><a class="source-link" href="https://www.oecd.org" target="_blank" rel="noopener">OECD</a></td>
+          <td>2023</td>
+          <td><span class="trend-down">↓</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td class="notes-cell">Rank 3 = 3rd highest per-capita plastic waste. Recycling rates remain low compared to European peers.</td>
+        </tr>
+
+        <tr data-cat="Environment">
+          <td>Climate Change Performance</td>
+          <td><span class="cat cat-Environment">Environment</span></td>
+          <td class="rank-num">65 <span class="of-total">/ 63</span></td>
+          <td>63</td>
+          <td>Very Low rating</td>
+          <td><a class="source-link" href="https://ccpi.org/country/usa/" target="_blank" rel="noopener">Climate Change Performance Index</a></td>
+          <td>2026</td>
+          <td><span class="trend-down">↓</span></td>
+          <td><span class="status status-poor">Poor</span></td>
+          <td class="notes-cell">Ranks 65th in a 63-country index — ranks 1–3 are always unassigned (no country achieves "Very High"). 2nd-worst overall. Worsened 8 places due to climate policy rollbacks. Denmark leads.</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <p style="margin-top:1.5rem;">
+    <a href="about.html#archive" class="btn btn-secondary">View Historical Data (2012–2015)</a>
+    &nbsp;
+    <a href="sources.html" class="btn btn-secondary">Data Sources</a>
+  </p>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h4>National Assessment Day</h4>
+      <p>An annual civic tradition encouraging Americans to honestly assess their nation's standing among the nations of the world.</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="synopsis.html">Synopsis</a></li>
+        <li><a href="ranks.html">Rankings</a></li>
+        <li><a href="trends.html">Trends</a></li>
+        <li><a href="barriers.html">Progress</a></li>
+        <li><a href="sources.html">Sources</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="mailto:feedback@nationalassessmentday.com" style="color:rgba(255,255,255,0.75);">feedback@nationalassessmentday.com</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 National Assessment Day</span>
+    <span>Data sourced from UN, WHO, OECD, WEF, and other international organizations.</span>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.getElementById('main-nav').classList.toggle('open');
+  });
+
+  // Category filter
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const rows = document.querySelectorAll('#ranksTable tbody tr');
+
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const cat = this.dataset.cat;
+      filterBtns.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      applyFilters();
+    });
+  });
+
+  // Search
+  document.getElementById('searchBox').addEventListener('input', applyFilters);
+
+  function applyFilters() {
+    const activeCat = document.querySelector('.filter-btn.active').dataset.cat;
+    const term = document.getElementById('searchBox').value.toLowerCase().trim();
+
+    rows.forEach(function(row) {
+      const catMatch = activeCat === 'all' || row.dataset.cat === activeCat;
+      const textMatch = !term || row.textContent.toLowerCase().includes(term);
+      row.classList.toggle('hidden', !(catMatch && textMatch));
+    });
+  }
+
+  // Table sort
+  const table = document.getElementById('ranksTable');
+  const headers = table.querySelectorAll('thead th[data-sort]');
+
+  headers.forEach(function(header, colIndex) {
+    header.style.cursor = 'pointer';
+    header.addEventListener('click', function() {
+      const isAsc = !this.classList.contains('sort-asc');
+      headers.forEach(function(h) { h.classList.remove('sort-asc', 'sort-desc'); });
+      this.classList.add(isAsc ? 'sort-asc' : 'sort-desc');
+
+      const colIdx = Array.from(this.parentNode.children).indexOf(this);
+      const tbody = table.querySelector('tbody');
+      const rowsArr = Array.from(tbody.querySelectorAll('tr'));
+      const sortType = this.dataset.sort;
+
+      rowsArr.sort(function(a, b) {
+        const aCell = a.cells[colIdx];
+        const bCell = b.cells[colIdx];
+        if (!aCell || !bCell) return 0;
+
+        let aVal = aCell.textContent.replace(/\s+/g, ' ').trim();
+        let bVal = bCell.textContent.replace(/\s+/g, ' ').trim();
+
+        if (sortType === 'num') {
+          // Extract leading number
+          const aNum = parseFloat(aVal);
+          const bNum = parseFloat(bVal);
+          if (!isNaN(aNum) && !isNaN(bNum)) {
+            return isAsc ? aNum - bNum : bNum - aNum;
+          }
+        }
+        return isAsc ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+      });
+
+      rowsArr.forEach(function(row) { tbody.appendChild(row); });
+    });
+  });
+
+  // Handle ?cat= URL parameter to pre-filter
+  const params = new URLSearchParams(window.location.search);
+  const catParam = params.get('cat');
+  if (catParam) {
+    const btn = document.querySelector('.filter-btn[data-cat="' + catParam + '"]');
+    if (btn) {
+      document.querySelector('.filter-btn.active').classList.remove('active');
+      btn.classList.add('active');
+      applyFilters();
+    }
+  }
+</script>
+
+</body>
+</html>
